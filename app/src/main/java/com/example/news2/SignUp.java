@@ -3,6 +3,7 @@ package com.example.news2;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -19,19 +20,22 @@ import com.google.firebase.auth.FirebaseUser;
 public class SignUp extends AppCompatActivity {
 
     FirebaseAuth mAuth = FirebaseAuth.getInstance();
-    EditText email = findViewById(R.id.signup_email_input);
-    EditText password = findViewById(R.id.signup_password_input);
-    Button button = findViewById(R.id.signup_btn_signup);
+    EditText email;
+    EditText password;
+    Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
+        email = findViewById(R.id.signup_email_input);
+        password = findViewById(R.id.signup_password_input);
+        button = findViewById(R.id.signup_btn_signup);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                createAccount(email.getText().toString(),password.getText().toString());
             }
         });
     }
@@ -46,7 +50,8 @@ public class SignUp extends AppCompatActivity {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d("TAG", "createUserWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
-                            //updateUI(user);
+                            startActivity(new Intent(SignUp.this, Login.class));
+                            finish();
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w("TAG", "createUserWithEmail:failure", task.getException());
