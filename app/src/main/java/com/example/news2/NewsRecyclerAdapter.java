@@ -1,5 +1,7 @@
 package com.example.news2;
 
+import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -13,25 +15,32 @@ import java.util.ArrayList;
 public class NewsRecyclerAdapter extends RecyclerView.Adapter<NewsRecyclerAdapter.ViewHolder> {
 
     ArrayList<NewsModel> datalist;
+    Context context;
 
-    public NewsRecyclerAdapter(ArrayList<NewsModel> datalist) {
+    public NewsRecyclerAdapter(ArrayList<NewsModel> datalist, Context context) {
         this.datalist = datalist;
+        this.context = context;
     }
+
 
     @NonNull
     @Override
     public NewsRecyclerAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return null;
+        LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
+        View view = layoutInflater.inflate(R.layout.fragment_profile, parent, false);
+        return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull NewsRecyclerAdapter.ViewHolder holder, int position) {
+        holder.textTitle.setText(datalist.get(position).getTitle());
+        holder.textDescription.setText(datalist.get(position).getDescription());
 
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return datalist.size();
     }
 
 
