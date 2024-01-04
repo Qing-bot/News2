@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "906277655267",
+    "project_id": "nyews-a68fd",
+    "storage_bucket": "nyews-a68fd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:906277655267:android:29cbd0def659d5e9b1ebd6",
+        "android_client_info": {
+          "package_name": "com.example.news"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA01Jl4yhV-ehyCdZKxq-Yxgl4DUhVMBW8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:906277655267:android:c99e741952e17e79b1ebd6",
+        "android_client_info": {
+          "package_name": "com.example.news2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA01Jl4yhV-ehyCdZKxq-Yxgl4DUhVMBW8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:906277655267:android:a40d5938d08c0dc6b1ebd6",
+        "android_client_info": {
+          "package_name": "com.example.nyews"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA01Jl4yhV-ehyCdZKxq-Yxgl4DUhVMBW8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
